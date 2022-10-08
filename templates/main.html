@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo/logo_django-removebg-preview.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'asstets/node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'asstets/node_modules/bootstrap-icons/font/bootstrap-icons.css' %}">
+    <title>MYSQL DJANGO</title>
+</head>
+<body>
+  {% include 'layout/navbar.html' %}
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <h1 class="mt-2">Configuration MySQL</h1>
+          <hr class="mt-0 mb-4">
+          {% block content %}
+
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'asstets/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+{% extends 'main.html' %}
+
+{% block tilte %} Delete - {{object}} {% endblock tilte %}
+{% block content %}
+
+ <form method="post">
+
+    <h1>Afficher les enregistrements</h1>
+    {% for project in projects %}
+        <ul>
+            <p class="d-flex">
+                <li class="d-block"> {{project.title}} <i class="bi bi-trash3-fill"></i> </li>
+            </p>
+            <p> {{project.description}} </p>
+        </ul>
+        <hr>
+    {% endfor %}
+  </form>
+
+  <button class="btn btn-sm btn-info">
+    <a href="{% url 'create-project' %}" class="text-light nav-link">Ajouter un enregistrement</a>
+  </button>
+
+{% endblock  %}

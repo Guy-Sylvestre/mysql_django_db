@@ -1,0 +1,23 @@
+
+{% extends 'main.html' %}
+
+{% block tilte %} Create - {{object}} {% endblock tilte %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-12">
+            {{ form.title|as_crispy_field }}
+          </div>
+          <div class="col-12">
+            {{ form.description|as_crispy_field }}
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Save Product</button>
+      </form>
+
+{% endblock  %}
